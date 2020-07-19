@@ -1,7 +1,10 @@
 [package]
 name = "systray"
 version = "0.4.0"
-authors = ["Kyle Machulis <kyle@machul.is>"]
+authors = [
+  "Kyle Machulis <kyle@machul.is>",
+  "Jeffrey McAteer <jeffrey.p.mcateer@gmail.com>"
+]
 description = "Rust library for making minimal cross-platform systray GUIs"
 license = "BSD-3-Clause"
 homepage = "http://github.com/qdot/systray-rs"
@@ -22,7 +25,12 @@ gtk= "0.8.1"
 glib= "0.9.3"
 libappindicator= "0.5.1"
 
-# [target.'cfg(target_os = "macos")'.dependencies]
-# objc="*"
-# cocoa="*"
-# core-foundation="*"
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = "0.20"
+objc = "0.2"
+core-graphics = "0.19.0"
+objc-foundation = "0.1"
+objc_id = "0.1"
+libc = "0.2"
+
+

@@ -16,8 +16,19 @@ systray-rs currently supports:
 
 - Linux GTK
 - Win32
+- MacOS*
 
-Cocoa core still needed!
+_*macos support comes indirectly from https://github.com/rust-sysbar/rust-sysbar. Many of the implementation details of rust-sysbar have been re-used here._
+
+# Cross-platform build testing
+
+Linux systems can compile this for all targets, after installing a C toolchain like `mingw` and `osxcross`
+you can test compiling the big 3 platforms quickly:
+
+```bash
+for T in x86_64-apple-darwin x86_64-pc-windows-gnu x86_64-unknown-linux-gnu ; do cargo build --target=$T || break ; done
+```
+
 
 # License
 
