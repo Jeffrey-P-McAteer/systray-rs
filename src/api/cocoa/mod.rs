@@ -1,4 +1,4 @@
-#![allow(non_snake_case)]
+#![allow(non_snake_case,unused_imports,dead_code,unused_mut,unused_variables)]
 
 use crate::{Error, SystrayEvent};
 use std;
